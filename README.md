@@ -26,7 +26,8 @@ This project is an educational implementation of graph algorithms using custom d
 │   ├── doctest                      # Contains the doctest header files.
 │   ├── doctest_algorithms.cpp       # Doctest unit tests for graph algorithms.
 │   └── doctest_data_structures.cpp  # Doctest unit tests for custom data structures.
-└── Makefile                         # Makefile to build and test the project.
+├── Makefile                         # Makefile to build and test the project.
+└── main.cpp                         # main demo file to demonstrate the functionalities implemented.
 ```
 
 ## Features
@@ -49,7 +50,7 @@ This project is an educational implementation of graph algorithms using custom d
 
 ## Building the Project
 
-This project uses a Makefile for building. The Makefile compiles the source files and builds the test executables using doctest. The option for checking for memory leaks using valgrind is also provided.
+This project uses a Makefile for building. The Makefile compiles the source files and builds the test executables using doctest, and the demo file. The option for checking for memory leaks using valgrind is also provided.
 
 ### On Linux
 
@@ -62,11 +63,24 @@ This project uses a Makefile for building. The Makefile compiles the source file
    make
    ```
 
-   This will build two test executables:
+   This will build the executables:
    - `test/doctest_algorithms` for graph algorithm tests.
    - `test/doctest_data_structures` for data structures tests.
+   - `demo` for functionality demonstration.
 
-3. **Run Tests:**
+3. **Build tests only:**
+
+   ```bash
+   make test
+   ```
+
+4. **Build demo only:**
+
+   ```bash
+   make demo
+   ```
+
+5. **Run Tests and/or demo:**
 
    To run the algorithms tests:
    ```bash
@@ -78,7 +92,12 @@ This project uses a Makefile for building. The Makefile compiles the source file
    ./test/doctest_data_structures
    ```
 
-4. **Run Valgrind:**  
+   To run the demo program:
+   ```bash
+   ./demo.exe
+   ```
+
+6. **Run Valgrind:**  
    For example, to check the algorithms test for memory leaks, run:
    ```bash
    make valgrind-algo
@@ -104,6 +123,7 @@ This project uses a Makefile for building. The Makefile compiles the source file
    make
    ./test/doctest_algorithms.exe
    ./test/doctest_data_structures.exe
+   ./demo.exe
    ```
 
 ## License
